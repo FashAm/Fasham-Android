@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">Fasham</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Take Photo</string>
+    <string name="title_activity_main">Fash.am</string>
+    <string name="title_activity_display_mess">DisplayMessActivity</string>
+    <string name="title_activity_tabs">Feed</string>
+    <string name="title_activity_input_text">Upload</string>
+
+</resources>
