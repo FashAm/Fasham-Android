@@ -12,6 +12,7 @@ import android.util.Log;
 
 import java.io.File;
 
+
 @SuppressLint("ParserError")
 public class CameraClass {
 
