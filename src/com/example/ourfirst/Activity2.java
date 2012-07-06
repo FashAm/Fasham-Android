@@ -39,6 +39,7 @@ public class Activity2 extends Activity {
         } else {
             button.setText("Go Back");
         }
+
         context = this;
         button.setOnClickListener(new View.OnClickListener() {
             @Override
