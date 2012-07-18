@@ -3,6 +3,7 @@ package com.example.ourfirst;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
@@ -74,11 +75,11 @@ public class InputTextActivity extends Activity {
                 //TO-DO call method for uploading to host
                 visibility = selectedRadioBtn.getText().toString();
                 Log.i("visibility", visibility);
+                
                 sendData(commentText.getText().toString(), visibility, tagText.getText().toString(), tagText2.getText().toString(), phoneNumber);
-
+                
             }
         });
-
 
     }
 
@@ -97,21 +98,22 @@ public class InputTextActivity extends Activity {
         } else {
             Log.i("sendData", "else statement");
             //toastMsgBox("Sending to Server...");
-
+            
             sentClass sentclass = new sentClass(this.getUserId(), description, visibility, phoneNumber, tag1, tag2, Integer.toString(this.numPhotos), "N/A", "http://10.66.1.185:8888/mobile");
             try {
                 //File file = new File(this.path);
                 //Bitmap bmCamera = BitmapFactory.decodeFile(file.toString());
                 //photos[0] = photo;
                 String sResponse = sentclass.sendData(CameraClass.photos); //TODO sent url to the class
+                 
                 Log.w("Response from sentClass", sResponse);
-
+               
                 //pop up box
                 toastMsgBox(sResponse);
 
                 Intent textIntent = new Intent(this, TabsActivity.class);
                 startActivity(textIntent);
-
+                
             } catch (Exception e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();

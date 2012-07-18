@@ -9,4 +9,5 @@
     <string name="title_activity_tabs">Feed</string>
     <string name="title_activity_input_text">Upload</string>
     <string name="title_activity_test">tesst</string>
+    <string name="title_activity_tag">Tag Photo</string>
 </resources>

@@ -12,6 +12,7 @@ public class MainActivity extends Activity {
     protected boolean _active = true;
     protected int _splashTime = 3000; // time to display the splash screen in ms
     private Intent intent;
+    
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -36,7 +37,6 @@ public class MainActivity extends Activity {
                 } finally {
                     finish();
                     startActivity(intent);
-                    stop();
                 }
             }
         };

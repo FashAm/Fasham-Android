@@ -56,13 +56,23 @@ public class CameraClass {
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == CAMERA_REQUEST) {
-            photo = (Bitmap) data.getExtras().get("data");
-            //String backgroundUrl = MediaStore.Images.Media.insertImage(this.getContentResolver(), photo, "fashioImage", null);           
-            //TODO bigger picture
-
-            //alert box for more images
-            Log.w("MESSAGEBOX ", "Hello form msgbox");
-            msgBoxForMorePictures();
+        	Log.w("Camera class ", "Before extracting result");
+        	Log.w("resultCode", Integer.toString(resultCode));
+        	if (resultCode == 0){
+        		// Intent backIntent = new Intent(android.intent.action.MAIN);
+        	}
+        	else{
+	        	photo = (Bitmap) data.getExtras().get("data");
+	            Intent intent = new Intent (activity,TagActivity.class);
+	            intent.putExtra("photo", photo);
+	        	activity.startActivity(intent);
+	            //String backgroundUrl = MediaStore.Images.Media.insertImage(this.getContentResolver(), photo, "fashioImage", null);           
+	            //TODO bigger picture
+	
+	            //alert box for more images
+	            Log.w("MESSAGEBOX ", "Hello form msgbox");
+	            msgBoxForMorePictures();
+        	}
         }
     }
 

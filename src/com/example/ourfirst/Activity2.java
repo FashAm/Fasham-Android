@@ -41,7 +41,7 @@ public class Activity2 extends Activity {
         }
         context = this;
         button.setOnClickListener(new View.OnClickListener() {
-            @Override
+            //@Override
             public void onClick(View v) {
                 startActivity(new Intent(context,TabsActivity.class));
                 finish();
@@ -85,10 +85,24 @@ public class Activity2 extends Activity {
             webView.goBack();
             return true;
         }
+        else if ( (keyCode == KeyEvent.KEYCODE_BACK) && (!webView.canGoBack()) ){
+        	 startActivity(new Intent(this,TabsActivity.class));
+        }
         return super.onKeyDown(keyCode, event);
-    }
+    } 
 
-    private void toastMsgBox(String sResponse) {
+   
+    @Override
+	protected void onStop() {
+		// TODO Auto-generated method stub
+		super.onStop();
+		finish();
+	}
+
+
+
+
+	private void toastMsgBox(String sResponse) {
         Context context = this.getApplicationContext();
         CharSequence text = sResponse;
         int duration = Toast.LENGTH_LONG;

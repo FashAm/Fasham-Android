@@ -1,6 +1,7 @@
 package com.example.ourfirst;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
@@ -23,6 +24,13 @@ public class TabsActivity extends Activity {
     private ArrayList mListItem;
 
     @Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+	}
+
+
+	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
@@ -60,6 +68,14 @@ public class TabsActivity extends Activity {
         mWebView.setWebViewClient(new HelloWebViewClient());
 
 
+        //fetch data from database and show on screen?
+        final ProgressDialog dialog = ProgressDialog.show(this, "title", "Reading db", true);
+        fetchDataFeed();
+       
+        dialog.dismiss();        
+        
+        
+        
        listview = (ListView) findViewById(R.id.list_view_friends);
         mListItem = ItemBO.getItems();
        Log.w("items", mListItem.toString());
@@ -71,7 +87,6 @@ public class TabsActivity extends Activity {
         Log.w("items", mListItem.toString());
         listview.setAdapter(new ListAdapter(TabsActivity.this, R.id.list_view_public,
                 mListItem));
-
 
 
         /*  Button buttonUpload = (Button) findViewById(R.id.buttonCapture);
@@ -103,7 +118,7 @@ public class TabsActivity extends Activity {
         }
     }
 
-    @Override
+   /* @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if ((keyCode == KeyEvent.KEYCODE_BACK) && mWebView.canGoBack()) {
             mWebView.goBack();
@@ -111,7 +126,7 @@ public class TabsActivity extends Activity {
         }
         return super.onKeyDown(keyCode, event);
     }
-
+*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -213,5 +228,20 @@ public class TabsActivity extends Activity {
             return view;
         }
     }
+    
+    
+    //query the server with the last db data 
+    public void fetchDataFeed(){
+    	FetchFeed fetcFeed = new FetchFeed(getApplicationContext());
+    	Log.d("fetchDataFeed", "returned in fetchdataFeed");
+    	fetcFeed.db.close();
+    	//fetcFeed.getDbHelper().getWritableDatabase();
+    	//Log.d("fetchDataFeed", "returned in from creating");
+    	
+    }
+    
+    
+    
+    
 
 }

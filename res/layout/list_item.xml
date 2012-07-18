@@ -2,9 +2,9 @@
 <RelativeLayout
 	android:id="@+id/rlt_main"
 	android:layout_width="fill_parent"
-	android:layout_height="67px"
+	android:layout_height="67dp"
 	android:background="#ff000000"
-	android:padding="6px"
+	android:padding="6dp"
 	xmlns:android="http://schemas.android.com/apk/res/android">
 <RelativeLayout
 	android:id="@+id/widget46"
@@ -38,7 +38,7 @@
 	android:id="@+id/tv_description2"
 	android:layout_width="146dp"
 	android:layout_height="22dp"
-	android:layout_marginLeft="10px"
+	android:layout_marginLeft="10dp"
 	android:text="Description"
 	android:textColor="#ffffffff"
 	android:gravity="left"
@@ -48,7 +48,7 @@
 	android:id="@+id/tv_description"
 	android:layout_width="146dp"
 	android:layout_height="22dp"
-	android:layout_marginLeft="10px"
+	android:layout_marginLeft="10dp"
 	android:text="Description"
 	android:textColor="#ffffffff"
 	android:gravity="left"
