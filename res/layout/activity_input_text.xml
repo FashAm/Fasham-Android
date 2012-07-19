@@ -34,17 +34,6 @@
         android:textStyle="bold" />
     -->
 
-    <Button
-            android:id="@+id/buttonUpload"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="390dp"
-            android:drawableRight="@drawable/ic_menu_agenda"
-            android:text="Upload"
-            android:textSize="21sp"
-            android:textStyle="bold"/>
-
     <RadioGroup
             android:id="@+id/radioGroup1"
             android:layout_width="wrap_content"
@@ -134,5 +123,16 @@
 
     </EditText>
 
+    <Button
+        android:id="@+id/buttonUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/TagView"
+        android:layout_marginBottom="23dp"
+        android:drawableRight="@drawable/ic_menu_agenda"
+        android:text="Upload"
+        android:textSize="21sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

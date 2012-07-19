@@ -49,14 +49,12 @@ public class TagActivity extends Activity {
 		
 		//EditText tag = new EditText(this);
 		EditText tag = ( EditText)findViewById(R.id.textTag);
-		
-		//RelativeLayout relativelayout = (RelativeLayout)findViewById(R.id.r)
-				
+						
 		tag.setHeight(100);
 		tag.setWidth(100);
-		//tag.layout(x, y, r, b)
+	/*	//tag.layout(x, y, r, b)
 		//tag.setFocusable(true);
-		
+*/		
 		tag.setVisibility(View.VISIBLE);
 		Log.i(TAG, "createTag " + tag.getText().toString() );
 		
