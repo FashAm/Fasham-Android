@@ -43,6 +43,7 @@ public class TagActivity extends Activity {
 		});
 
 		Log.i(TAG, "tag acvtivity");
+		Log.i(TAG, "tag acvtivity");
 	}
 
 	public void createTag(int x, int y) {
