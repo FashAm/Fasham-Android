@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         Log.i("hello", "my hello");
         // thread for displaying the SplashScreen
-        intent = new Intent(this, TabsActivity.class);
+        intent = new Intent(this, WelcomeScreen.class);
         Thread splashTread = new Thread() {
             @Override
             public void run() {
