@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 
+//welcome screen
 public class WelcomeScreen extends Activity {
 
 	@Override
