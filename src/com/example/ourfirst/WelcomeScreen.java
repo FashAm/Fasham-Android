@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 
-//welcome screen
+//welcome screen- this is the screen where the fb login button will be displayed
 public class WelcomeScreen extends Activity {
 
 	@Override
