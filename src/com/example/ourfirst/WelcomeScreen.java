@@ -27,6 +27,3 @@ public class WelcomeScreen extends Activity {
 
 }
 
-
-
-
